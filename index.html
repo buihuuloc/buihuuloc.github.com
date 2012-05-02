@@ -64,6 +64,7 @@ header a {
             <div class="nav-collapse">
                 <div class="nav">
                     <a data-toggle="modal" href="#modalAuthor"class=" btn btn-success"><i class="icon-white icon-qrcode"></i> Designer</a>
+                    <a id="popovertest" href="#" class="btn btn-danger" rel="popover">Author</a>
                 </div>
             </div>
         </div>
@@ -124,7 +125,11 @@ Năm 1832, Nguyễn Công Trứ với cương vị Tổng Đốc Hải An (Hải
 /*global window, document, $ */
 $(function () {
     'use strict';
-
+    $("a[rel=popover]").popover({
+            placement: "bottom",
+            title: "Bùi Hữu Lộc",
+            content:"Awesome Popover"
+            })
     // Start slideshow button:
     $('#start-slideshow').button().click(function () {
         var options = $(this).data(),
