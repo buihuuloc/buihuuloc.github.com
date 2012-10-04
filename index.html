@@ -188,7 +188,7 @@ $(function () {
             url = 'http://farm' + photo.farm + '.static.flickr.com/' +
                 photo.server + '/' + photo.id + '_' + photo.secret;
             $('<a rel="gallery"/>')
-                .append($('<img>').prop('src', url + '_s.jpg'))
+                .append($('<img style="border: 1px solid white">').prop('src', url + '_s.jpg'))
                 .prop('href', url + '_b.jpg')
                 .prop('title', photo.title)
                 .appendTo(gallery);
